@@ -1,15 +1,17 @@
 import React from 'react';
-import { View, Text, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 
-const WelcomeButton = ({ text }) => {
+const WelcomeButton = ({ text, navigation }) => {
     return (
         <View style={styles.buttonView}>
-            <TouchableWithoutFeedback>
+            <TouchableOpacity
+                onPress={() => navigation.navigate(text, {})}
+                style={styles.touchable}>
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>{text}</Text>
                 </View>
-            </TouchableWithoutFeedback>
+            </TouchableOpacity>
         </View>
     );
 }
