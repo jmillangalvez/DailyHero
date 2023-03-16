@@ -7,10 +7,8 @@ const WelcomeButton = ({ text, navigation }) => {
         <View style={styles.buttonView}>
             <TouchableOpacity
                 onPress={() => navigation.navigate(text, {})}
-                style={styles.touchable}>
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>{text}</Text>
-                </View>
+                style={styles.button}>
+                <Text style={styles.buttonText}>{text}</Text>
             </TouchableOpacity>
         </View>
     );

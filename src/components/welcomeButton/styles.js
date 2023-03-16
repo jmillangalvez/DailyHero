@@ -4,9 +4,6 @@ import { colors, fonts } from '../../theme';
 export const styles = StyleSheet.create({
   buttonView: {
     flex: 1,
-  },
-  touchable: {
-    width: '100%',
     alignItems: 'center'
   },
   button: {
