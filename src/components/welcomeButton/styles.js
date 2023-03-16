@@ -4,7 +4,6 @@ import { colors, fonts } from '../../theme';
 export const styles = StyleSheet.create({
   buttonView: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center'
   },
   button: {

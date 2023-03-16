@@ -1,21 +1,38 @@
 import * as React from 'react';
-import { StyleSheet, View, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { WelcomeView, LoginView, RegisterView } from './src/views';
+import { colors } from './src/theme';
+
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: colors.primary,
+  },
+};
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <NavigationContainer theme={MyTheme}>
       <StatusBar barStyle="dark-content" />
-      <RegisterView></RegisterView>
-    </View>
+      <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: true, }}>
+        <Stack.Screen
+          name="Welcome"
+          component={WelcomeView}
+        />
+        <Stack.Screen 
+          name="Login"
+          component={LoginView}
+        />
+        <Stack.Screen 
+          name="Register"
+          component={RegisterView}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};

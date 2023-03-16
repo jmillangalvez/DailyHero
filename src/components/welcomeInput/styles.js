@@ -4,7 +4,6 @@ import { colors, fonts } from '../../theme';
 export const styles = StyleSheet.create({
     inputView: {
       flex: 1,
-      justifyContent: 'center',
       alignItems: 'center',
     },
     input: {
