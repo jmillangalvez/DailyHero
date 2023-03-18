@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { styles } from './styles';
-import { resetInputs } from '../../redux/actions/welcomeInputActions';
+import { resetInputs } from '../../../redux/actions/welcomeInputActions';
 
-const WelcomeButton = ({ text, navigation }) => {
+const WelcomeLoginButton = ({ navigation }) => {
     const dispatch = useDispatch();
 
     return (
@@ -12,13 +12,13 @@ const WelcomeButton = ({ text, navigation }) => {
             <TouchableOpacity
                 onPress={() => {
                     dispatch(resetInputs());
-                    navigation.navigate(text, {});
+                    navigation.navigate('Login', {});
                 }}
                 style={styles.button}>
-                <Text style={styles.buttonText}>{text}</Text>
+                <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
         </View>
     );
 }
 
-export default WelcomeButton;
+export default WelcomeLoginButton;

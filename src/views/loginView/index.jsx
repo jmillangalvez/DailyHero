@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { WelcomeButton, WelcomeHeader, UsernameInput, PasswordInput, FlexView } from '../../components';
+import { WelcomeHeader, UsernameInput, PasswordInput, FlexView } from '../../components';
 import { styles } from "./styles";
 import { labels } from "../../labels/labels";
 
@@ -14,8 +14,6 @@ const LoginView = () => {
             <FlexView flex='0.5'></FlexView>
             <PasswordInput ></PasswordInput>
             <FlexView flex='4'></FlexView>
-            <WelcomeButton text={labels.login}>
-            </WelcomeButton>
             <FlexView flex='4'></FlexView>
         </View>
     )

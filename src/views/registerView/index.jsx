@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { WelcomeButton, WelcomeHeader, UsernameInput, EmailInput, PasswordInput, FlexView } from '../../components';
+import { WelcomeHeader, UsernameInput, EmailInput, PasswordInput, FlexView } from '../../components';
 import { styles } from "./styles";
 import { labels } from "../../labels/labels";
 
@@ -10,14 +10,12 @@ const RegisterView = () => {
             <WelcomeHeader text={labels.register}>
             </WelcomeHeader>
             <FlexView flex='2'></FlexView>
-            <UsernameInput ></UsernameInput>
+            <UsernameInput></UsernameInput>
             <FlexView flex='0.5'></FlexView>
-            <EmailInput ></EmailInput>
+            <EmailInput></EmailInput>
             <FlexView flex='0.5'></FlexView>
-            <PasswordInput ></PasswordInput>
+            <PasswordInput></PasswordInput>
             <FlexView flex='2.5'></FlexView>
-            <WelcomeButton text={labels.register}>
-            </WelcomeButton>
             <FlexView flex='4'></FlexView>
         </View>
     )
