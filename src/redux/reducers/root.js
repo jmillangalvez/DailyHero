@@ -1,3 +1,6 @@
 import { combineReducers } from "redux";
+import { welcomeInputReducer } from "./welcomeInputReducer";
 
-export const reducers = combineReducers({});
+export const reducer = combineReducers({
+    welcomeInputs: welcomeInputReducer
+});
