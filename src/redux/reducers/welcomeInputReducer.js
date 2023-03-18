@@ -1,8 +1,6 @@
 import { welcomeInputActions } from "../actions/welcomeInputActions";
 
 export function welcomeInputReducer(state = [], action) {
-    console.log(action);
-    console.log(state);
     switch (action.type){
         case welcomeInputActions.MODIFY_USERNAME_INPUT:
             return {
