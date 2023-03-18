@@ -1,9 +1,9 @@
 import { View } from "react-native";
-import { WelcomeHeader, UsernameInput, EmailInput, PasswordInput, FlexView } from '../../components';
+import { WelcomeHeader, UsernameInput, EmailInput, PasswordInput, FlexView, RegisterButton } from '../../components';
 import { styles } from "./styles";
 import { labels } from "../../labels/labels";
 
-const RegisterView = () => {
+const RegisterView = ({ navigation }) => {
     return (
         <View style={styles.view}>
             <FlexView flex='3'></FlexView>
@@ -16,6 +16,7 @@ const RegisterView = () => {
             <FlexView flex='0.5'></FlexView>
             <PasswordInput></PasswordInput>
             <FlexView flex='2.5'></FlexView>
+            <RegisterButton navigation={navigation}></RegisterButton>
             <FlexView flex='4'></FlexView>
         </View>
     )

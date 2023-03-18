@@ -4,4 +4,6 @@ export { default as WelcomeHeader } from './welcomeHeader';
 export { default as UsernameInput } from './welcomeInputs/usernameInput';
 export { default as EmailInput } from './welcomeInputs/emailInput';
 export { default as PasswordInput } from './welcomeInputs/passwordInput';
+export { default as LoginButton } from './loginButton';
+export { default as RegisterButton } from './registerButton';
 export { default as FlexView } from './flexView';
