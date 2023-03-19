@@ -17,7 +17,7 @@ const WelcomeView = ({ navigation }) => {
             </WelcomeRegisterButton>
             <FlexView flex='5'></FlexView>
         </View>
-    )
+    );
 };
 
 export default WelcomeView;
