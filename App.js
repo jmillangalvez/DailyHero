@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { WelcomeView, LoginView, RegisterView } from './src/views';
+import { WelcomeView, LoginView, RegisterView, HomepageView } from './src/views';
 import { colors } from './src/theme';
 import { store } from './src/redux/store/store';
 
@@ -34,6 +34,10 @@ export default function App() {
           <Stack.Screen 
             name="Register"
             component={RegisterView}
+          />
+          <Stack.Screen 
+            name="Homepage"
+            component={HomepageView}
           />
         </Stack.Navigator>
       </NavigationContainer>
