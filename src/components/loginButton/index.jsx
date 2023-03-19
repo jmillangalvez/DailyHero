@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { styles } from './styles';
 import { loginStart } from '../../redux/actions/loginActions';
 
-const RegisterButton = ({ navigation }) => {
+const LoginButton = ({ navigation }) => {
     const dispatch = useDispatch();
 
     return (
@@ -18,4 +18,4 @@ const RegisterButton = ({ navigation }) => {
     );
 }
 
-export default RegisterButton;
+export default LoginButton;
