@@ -19,7 +19,7 @@ const RegisterView = ({ navigation }) => {
             <RegisterButton navigation={navigation}></RegisterButton>
             <FlexView flex='4'></FlexView>
         </View>
-    )
+    );
 };
 
 export default RegisterView;

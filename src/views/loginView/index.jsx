@@ -17,7 +17,7 @@ const LoginView = ({ navigation }) => {
             <LoginButton navigation={navigation}></LoginButton>
             <FlexView flex='4'></FlexView>
         </View>
-    )
+    );
 };
 
 export default LoginView;
