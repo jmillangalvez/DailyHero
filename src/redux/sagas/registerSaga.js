@@ -1,5 +1,6 @@
 import { put, takeEvery } from 'redux-saga/effects';
 import { registerActions, registerSuccess, registerFailure } from "../actions/registerActions";
+import * as RootNavigation from '../../navigation/RootNavigation.js';
 
 function* startRegister(action) {
     switch (action.type){
@@ -12,6 +13,7 @@ function* startRegister(action) {
                 yield put(registerFailure('User already created'));
             }
         case registerActions.REGISTER_SUCCESS:
+            RootNavigation.navigate('Homepage', {});
     };
 }
 
