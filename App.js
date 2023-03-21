@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { navigationRef } from './src/navigation/RootNavigation';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { WelcomeView, LoginView, RegisterView, HomepageView } from './src/views';
 import { colors } from './src/theme';
@@ -20,7 +21,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <Provider store={store}>
-      <NavigationContainer theme={MyTheme}>
+      <NavigationContainer theme={MyTheme} ref={navigationRef}>
         <StatusBar barStyle="dark-content" />
         <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: true, }}>
           <Stack.Screen

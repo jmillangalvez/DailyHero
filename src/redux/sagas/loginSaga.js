@@ -1,5 +1,6 @@
 import { put, takeEvery } from 'redux-saga/effects';
 import { loginActions, loginSuccess, loginFailure } from "../actions/loginActions";
+import * as RootNavigation from '../../navigation/RootNavigation.js';
 
 function* startLogin(action) {
     switch (action.type){
@@ -12,6 +13,7 @@ function* startLogin(action) {
                 yield put(loginFailure('User not found'));
             }
         case loginActions.LOGIN_SUCCESS:
+            RootNavigation.navigate('Homepage', {});
     };
 }
 
