@@ -10,6 +10,6 @@ export const styles = StyleSheet.create({
   headerText: {
     color: colors.secondary,
     fontFamily: fonts.regular,
-    fontSize: fonts.xl
+    fontSize: fonts.xxl
   }
 });
