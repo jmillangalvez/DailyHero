@@ -5,35 +5,23 @@ export function welcomeInputReducer(state = [], action) {
         case welcomeInputActions.MODIFY_USERNAME_INPUT:
             return {
                 ...state,
-                welcomeInputs: {
-                    ...state.welcomeInputs,
-                    usernameInput: action.text
-                }
+                usernameInput: action.text
             };
         case welcomeInputActions.MODIFY_EMAIL_INPUT:
             return {
                 ...state,
-                welcomeInputs: {
-                    ...state.welcomeInputs,
-                    emailInput: action.text
-                }
+                emailInput: action.text
             };
         case welcomeInputActions.MODIFY_PASSWORD_INPUT:
             return {
                 ...state,
-                welcomeInputs: {
-                    ...state.welcomeInputs,
-                    passwordInput: action.text
-                }
+                passwordInput: action.text
             };
         case welcomeInputActions.RESET_INPUTS:
             return {
-                ...state,
-                welcomeInputs: {
-                    usernameInput: '',
-                    emailInput: '',
-                    passwordInput: ''
-                }
+                usernameInput: '',
+                emailInput: '',
+                passwordInput: ''
             };
         default:
             return state;

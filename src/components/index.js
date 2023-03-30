@@ -7,3 +7,7 @@ export { default as PasswordInput } from './welcomeInputs/passwordInput';
 export { default as LoginButton } from './loginButton';
 export { default as RegisterButton } from './registerButton';
 export { default as FlexView } from './flexView';
+export { default as AppHeader } from './appHeader';
+export { default as GoldDisplay } from './goldDisplay';
+export { default as LevelDisplay } from './levelDisplay';
+export { default as UsernameDisplay } from './usernameDisplay';

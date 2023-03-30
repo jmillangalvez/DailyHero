@@ -28,15 +28,15 @@ export default function App() {
             name="Welcome"
             component={WelcomeView}
           />
-          <Stack.Screen 
+          <Stack.Screen
             name="Login"
             component={LoginView}
           />
-          <Stack.Screen 
+          <Stack.Screen
             name="Register"
             component={RegisterView}
           />
-          <Stack.Screen 
+          <Stack.Screen
             name="Homepage"
             component={HomepageView}
           />

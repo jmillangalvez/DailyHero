@@ -3,13 +3,13 @@ import { colors, fonts } from '../../theme';
 
 export const styles = StyleSheet.create({
   headerView:{
-    flex: 2,
+    flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
-    alignItems: 'center'
   },
   headerText: {
     color: colors.secondary,
     fontFamily: fonts.regular,
-    fontSize: fonts.xxl
+    fontSize: fonts.md
   }
 });
