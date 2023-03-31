@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { navigationRef } from './src/navigation/RootNavigation';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { WelcomeView, LoginView, RegisterView, HomepageView } from './src/views';
+import { WelcomeView, LoginView, RegisterView, HomepageView, NewHeroView } from './src/views';
 import { colors } from './src/theme';
 import { store } from './src/redux/store/store';
 
@@ -35,6 +35,10 @@ export default function App() {
           <Stack.Screen
             name="Register"
             component={RegisterView}
+          />
+          <Stack.Screen
+            name="NewHero"
+            component={NewHeroView}
           />
           <Stack.Screen
             name="Homepage"

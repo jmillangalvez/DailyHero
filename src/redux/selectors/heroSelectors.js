@@ -15,4 +15,4 @@ export const goldSelector = () => createSelector(
 export const usernameSelector = () => createSelector(
     selectHero,
     (hero) => hero.username
-)
+);

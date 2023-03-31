@@ -5,7 +5,10 @@ import { styles } from './styles';
 const WelcomeHeader = ({ text }) => {
     return (
         <View style={styles.headerView}>
-            <Text style={styles.headerText}>{text}</Text>
+            {text.map(t => (
+                    <Text key={t} style={styles.headerText}>{t}</Text>
+                )
+            )}
         </View>
     );
 }

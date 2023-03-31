@@ -17,6 +17,11 @@ export function welcomeInputReducer(state = [], action) {
                 ...state,
                 passwordInput: action.text
             };
+        case welcomeInputActions.MODIFY_HERO_NAME_INPUT:
+            return {
+                ...state,
+                heroNameInput: action.text
+            };
         case welcomeInputActions.RESET_INPUTS:
             return {
                 usernameInput: '',

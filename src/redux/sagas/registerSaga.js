@@ -1,28 +1,26 @@
 import { put, takeEvery } from 'redux-saga/effects';
 import { registerActions, registerSuccess, registerFailure } from "../actions/registerActions";
-import { loadHero } from '../actions/heroActions';
+import * as RootNavigation from '../../navigation/RootNavigation.js';
 
 function* startRegister(action) {
     switch (action.type){
         case registerActions.REGISTER_START:
             //WIP: This will call the register API and return the userId if exist
             const userAvailable = true;
-            const newHero = {
-                username: 'newHero',
-                level: '1',
-                gold: '100'
-            };
             if(userAvailable){
-                yield put(loadHero(newHero));
+                yield put(registerSuccess());
             }else{
                 yield put(registerFailure('User already created'));
             }
+            break;
+        case registerActions.REGISTER_SUCCESS:
+            RootNavigation.navigate('NewHero', {});
             break;
     };
 }
 
 function* registerSaga() {
-    yield takeEvery([registerActions.REGISTER_START], startRegister);
+    yield takeEvery([registerActions.REGISTER_START, registerActions.REGISTER_SUCCESS], startRegister);
 }
 
 export default registerSaga;

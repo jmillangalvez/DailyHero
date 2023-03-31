@@ -4,10 +4,11 @@ import { styles } from "./styles";
 import { labels } from "../../labels/labels";
 
 const LoginView = ({ navigation }) => {
+    const text = [labels.login];
     return (
         <View style={styles.view}>
             <FlexView flex='3'></FlexView>
-            <WelcomeHeader text={labels.login}>
+            <WelcomeHeader text={text}>
             </WelcomeHeader>
             <FlexView flex='2'></FlexView>
             <UsernameInput ></UsernameInput>
