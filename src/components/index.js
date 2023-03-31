@@ -13,3 +13,5 @@ export { default as GoldDisplay } from './goldDisplay';
 export { default as LevelDisplay } from './levelDisplay';
 export { default as UsernameDisplay } from './usernameDisplay';
 export { default as CreateHeroButton } from './createHeroButton';
+export { default as ItemDisplay } from './itemDisplay';
+export { default as EquipmentDisplay } from './equipmentDisplay';
