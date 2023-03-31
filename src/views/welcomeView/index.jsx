@@ -4,10 +4,11 @@ import { styles } from "./styles";
 import { labels } from "../../labels/labels";
 
 const WelcomeView = ({ navigation }) => {
+    const text = [labels.appName];
     return (
         <View style={styles.view}>
             <FlexView flex='4.5'></FlexView>
-            <WelcomeHeader text={labels.appName}>
+            <WelcomeHeader text={text}>
             </WelcomeHeader>
             <FlexView flex='4.5'></FlexView>
             <WelcomeLoginButton navigation={navigation}>
