@@ -1,6 +1,8 @@
-import { put, takeEvery } from 'redux-saga/effects';
+import { put, select, takeEvery } from 'redux-saga/effects';
+import { useSelector } from "react-redux";
 import { heroActions, loadHero } from "../actions/heroActions";
 import { loginSuccess } from '../actions/loginActions';
+import { heroNameSelector } from '../selectors/inputSelectors';
 
 function* configureHero(action) {
     switch (action.type){
@@ -19,11 +21,19 @@ function* configureHero(action) {
         case heroActions.LOAD_HERO:
             yield put(loginSuccess());
             break;
+        case heroActions.CREATE_HERO:
+            const heroName = yield select(heroNameSelector());
+            const newHero = {
+                username: heroName,
+                level: '1',
+                gold: '100'
+            };
+            yield put(loadHero(newHero));
     };
 }
 
 function* heroSaga() {
-    yield takeEvery([heroActions.FETCH_HERO, heroActions.LOAD_HERO], configureHero);
+    yield takeEvery([heroActions.FETCH_HERO, heroActions.LOAD_HERO, heroActions.CREATE_HERO], configureHero);
 }
 
 export default heroSaga;
